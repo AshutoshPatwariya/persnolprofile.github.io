@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+
+
+
+
+    <title>TO DO List HOME</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=My+Soul&display=swap');
+    *{
+         margin : 0;
+    padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 20px 20px 20px 20px;
+        background-image: url("photos/header_background.webp");
+        font-size: 60px;
+        font-family: 'Lobster', cursive;
+        border: 1px black;
+        /* margin-left: 35%;
+        margin-right: 40%;*/
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .btn1 {
+
+
+        position: absolute;
+        top: 65%;
+        right: 30%;
+        width: 270px;
+        height: 82px;
+        border: 0;
+        outline: none;
+        background: #2f2f2f;
+        color: #fff;
+        font-size: 35px;
+        border-radius: 40px;
+        text-align: center;
+        box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .btn1 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .btn1 span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -25px;
+        transition: 0.5s;
+    }
+
+    .btn1:hover span {
+        padding-right: 25px;
+    }
+
+    .btn1:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    #list2 {
+
+        float: right;
+        margin-top: 40px;
+        width: 48%;
+        height: 100%
+    }
+
+    body {
+        background-image: url("photos/background.jpg");
+
+    }
+
+    .feedback {
+        float: right;
+        margin-top: -30%;
+        margin-right: 10px;
+
+        width: 400px;
+        background-image: url("photos/suggestion_box.jpg");
+        /*       filter: blur(-100px) brightness(-100px);*/
+        box-shadow: 0 0 100px rgba(250, 250, 250, 0.6);
+        /*   opacity: 0.6;*/
+    }
+
+    .heading {
+        color: black;
+        text-align: center;
+        padding-top: 20px;
+
+    }
+
+    /*.id{
+        margin-left:100px;
+        margin-bottom: 10px;
+    }*/
+
+
+
+    .feedback form {
+        width: 100%;
+        text-align: center;
+        padding: 25px 20px;
+
+    }
+
+    .feedback form h2 {
+        padding: 10px 0;
+        padding-bottom: 50px;
+
+    }
+
+    form.id {
+        position: relative;
+    }
+
+
+    .id i {
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+
+
+    }
+
+    .input {
+        width: 80%;
+        height: 50px;
+        margin: 4px 0;
+        border: 1px solid #5c5c5c;
+        border-radius: 3px;
+        background-color: whitesmoke;
+        padding: 0 15px;
+        font-size: 20px;
+        margin-left: 30px;
+
+
+    }
+
+    .feedback textarea {
+        padding: 5px 15px;
+        border: 1px solid #b35b5b;
+        border-radius: 3px;
+        background-color: azure;
+
+        font-size: 20px;
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+
+
+    .feedback button {
+        margin-top: 2px;
+        border: none;
+        background: #00fff0;
+        color: #222;
+        padding: 10px 0;
+        width: 80%;
+        font-size: 20px;
+        font-weight: 800;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-left: 30px;
+    }
+
+    .feedback input:focus::placeholder,
+    .feedback textarea:focus::placeholder {
+        padding-left: 4px;
+
+        color: #000000;
+        transition: all 0.3s ease;
+    }
+
+    #footer {
+        position: fixed;
+        text-align: bottom;
+        margin-top: 2%;
+        margin-left: 78%;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TODOs List</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="advantage.html">Advantages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="how_to_use.html">How to use</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <h1> TO DO LIST</h1>
+
+    <div class="img">
+        <img src="photos/to do list.jpg" width="50%">
+        <div id=list2><img src="photos/list2.jpg" widhth="50%" height="auto"></div>
+    </div>
+
+
+    <a href="todolist.html"><button class="btn1"><span> Start </span></button></a>
+
+    <div class="feedback">
+        <from>
+            <h2 class="heading"><b>Give your Feedback</h2></b>
+            <div class="id">
+                <input type="text" placeholder="Full name" class="input">
+                <i class="far fa-user"></i>
+            </div>
+            <div class="id">
+                <input type="email" placeholder="Email address" class="input">
+                <i class="far fa-envelope"></i>
+            </div>
+            <div class="id">
+                <textarea cols="15" rows="5" placeholder="Enter your opinions here..."></textarea>
+                <button>Sent</button>
+            </div>
+
+
+        </from>
+    </div>
+
+    <footer id="footer">@copyright TO-DO list-ALL Right Reserved</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZE</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="intro">
+        <h1>Welcome to fun QUIZE</h1>
+        <button class="start_btn"><span>Start</span></button>
+
+        <div class="info_box">
+            <div class="info_title">
+
+                <h2>Some rules for the QUIZE</h2>
+            </div>
+            <ul class="info_list">
+                <li class="info"> You will have only <span><B>15 seconds</span> </B>per each question</li>
+                <li class="info">Their are total 5 question</li>
+                <li class="info">For correct ans you will be awarded with +1 point else 0 points will be given</li>
+                <li class="info">Once you select your anwer, you can't reselect</li>
+                <li class="info">You can't exit from the Quize while you're playing</li>
+                <li class="info">You can't select any option Once time goes off</li>
+
+            </ul>
+
+            <div class="buttons">
+
+                <button class="quit">Exit</button>
+                <button class="restart">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUIZ BOX -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">
+                Awesome Quiz Application
+            </div>
+            <div class="timer">
+                <div class="time_text">
+                    TIME left
+                </div>
+                <div class="timer_sec">15</div>
+            </div>
+
+        </header>
+        <section>
+            <div class="que_text">
+                <span>Bay of Bengal is in which state?</span>
+            </div>
+            <div class="option_list">
+                <div class="option">
+                    <span>West Bengal</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Odisha</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Andhra Pradesh</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Liquid</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+        </section>
+        <!--fotter-->
+        <footer>
+            <div class="total_que">
+                <span>
+                    <p><b>2</b></p>of<p><b>5</b></p>Questions
+                </span>
+            </div>
+            <button class="next_btn">Next Que </button>
+        </footer>
+    </div>
+
+<!--Result box-->
+<div class="result_box">
+    <div class="icon">
+        <i class="fas fa-crown"></i>
+    </div>
+    <div class ="complete_text">You've completed the Quiz</div>
+    <div class="score_text">
+        <span>
+            You got <p>2</p> out of <p>5</p>
+        </span>
+    </div>
+    <div class="buttons">
+        <button class="restart">Replay Quiz</button>
+        <button class="quit">Quit Quiz</button>
+    </div>
+</div>
+
+<script src="questions.js"></script>
+
+
+<script src="index.js"></script>
+</body>
+</html>
